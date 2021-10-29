@@ -2,7 +2,7 @@
   <div class="login-container">
     <div class="login-form-wrap">
       <div class="login-head">
-        <div class="logo"></div>
+        <div class="logo">头条自媒体管理端</div>
       </div>
       <el-form class="login-form" ref="login-form" :model="user" :rules="formRules">
         <el-form-item prop="mobile">
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       user: {
-        mobile: '13911111111',
+        mobile: '13611111111',
         code: '246810',
         agree: false
       },
@@ -105,20 +105,27 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./login_bg.jpg') no-repeat;
-  background-size: cover;
+  background: rgb(245, 249, 252) url('https://lhcdn.lanhuapp.com/web/imgs/left-auto827f91e7.png') no-repeat;
+  background-size: 430px;
+  background-position: 50px center;
   .login-form-wrap {
     min-width: 300px;
     padding: 30px 50px 10px;
     background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
     .login-head {
       display: flex;
       justify-content: center;
       .logo {
         width: 200px;
         height: 57px;
-        background: url('./logo_index.png') no-repeat;
-        background-size: contain;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(47, 46, 63);
+        text-align: center;
+        // background: url('./logo_index.png') no-repeat;
+        // background-size: contain;
       }
     }
     .login-form {
