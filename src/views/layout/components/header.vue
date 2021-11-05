@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <div>
+    <div class="header-left">
       <i
         :class="{
           'el-icon-s-fold': isCollapse,
@@ -8,7 +8,10 @@
         }"
         @click="$emit('updateIsCollapse', !isCollapse)"
       ></i>
-      <span>江苏传智播客科技教育有限公司</span>
+      <el-breadcrumb separator="/" class="breadcrumb-bar">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      </el-breadcrumb>
+      <!-- <span>江苏传智播客科技教育有限公司</span> -->
     </div>
     <el-dropdown>
       <div class="avatar-wrap">
@@ -84,6 +87,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .header-left {
+    display: flex;
+    align-items: center;
+    .breadcrumb-bar {
+      margin-left: 20px;
+    }
+  }
   .avatar-wrap {
     display: flex;
     align-items: center;
